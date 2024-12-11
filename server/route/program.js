@@ -9,16 +9,16 @@ const router = express.Router();
 
 // GET -> fetch all the programs
 
-router.get("/allPrograms", async (req, res) => {
+router.get("/allPrograms", async (_req, res) => {
   try {
-    const programs = await Program.find({}, title, image);
+    const programs = await Program.find();
     res.status(200).json({
       success: true,
       total: programs.length,
       programs,
     });
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
     res.status(500).json({
       success: false,
       message: "internal server error :/",
