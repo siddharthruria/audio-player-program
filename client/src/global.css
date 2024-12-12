@@ -51,11 +51,65 @@ body {
 }
 
 .program-title:hover {
-  color: rgb(58, 61, 148);
+  color: rgb(61, 98, 161);
 }
 
 .program-description {
   font-size: 14px;
   color: #383131;
   margin: 0 10px 10px;
+}
+
+.program-details {
+  padding: 20px;
+}
+
+.program-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.program-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.program-info {
+  max-width: 600px;
+}
+
+.tracks-list {
+  margin-top: 20px;
+}
+
+.track-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.play-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #0056b3;
 }

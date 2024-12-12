@@ -40,7 +40,7 @@ const ProgramProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http:localhost:5555/api/program/details/${programId}`,
+        `http://localhost:5555/api/program/details/${programId}`,
         {
           method: "GET",
           headers: {
@@ -55,7 +55,9 @@ const ProgramProvider = ({ children }) => {
       }
 
       const responseData = await response.json();
-      setCurrProgram(responseData);
+      setCurrProgram(responseData.program);
+      // console.log(responseData.program);
+      // console.log(currProgram);
     } catch (error) {
       console.error("some error occured :/");
     } finally {

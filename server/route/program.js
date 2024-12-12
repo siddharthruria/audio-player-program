@@ -6,7 +6,7 @@ const router = express.Router();
 // ------------------------------- ROUTE 1 -------------------------------
 
 // route (/api/program/allPrograms)
-
+  
 // GET -> fetch all the programs
 
 router.get("/allPrograms", async (_req, res) => {
