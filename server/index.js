@@ -8,7 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 connectDB();
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://audio-player-client.onrender.com/",
+];
 
 app.use(
   cors({
