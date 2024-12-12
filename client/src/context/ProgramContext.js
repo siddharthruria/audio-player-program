@@ -27,7 +27,8 @@ const ProgramProvider = ({ children }) => {
       }
 
       const responseData = await response.json();
-      setPrograms(responseData);
+      setPrograms(responseData.programs);
+      // console.log(responseData);
     } catch (error) {
       console.error("some error occured :/");
     } finally {
