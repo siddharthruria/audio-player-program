@@ -4,11 +4,15 @@ body {
 
 .home1 {
   text-align: center;
-  padding: 50px !important;
+  padding-top: 50px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
   font-family: Arial, sans-serif;
 }
 
 .home2 {
+  display: grid;
+  align-items: center;
   padding-left: 20px;
   padding: 45px !important;
   font-family: Arial, sans-serif;
@@ -159,4 +163,9 @@ body {
 
 input[type="range"] {
   width: 100%;
+}
+
+.button-to-screen {
+  padding-left: 700px;
+  font-family: Arial, sans-serif;
 }

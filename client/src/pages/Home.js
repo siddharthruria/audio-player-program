@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="home1">
@@ -49,6 +51,13 @@ const Home = () => {
             </div>
           </li>
         </ul>
+      </div>
+
+      <div className="button-to-screen">
+        <h5>click on the button below to go to the project screens</h5>
+        <button onClick={() => navigate("/program/allPrograms")}>
+          click me
+        </button>
       </div>
     </>
   );
