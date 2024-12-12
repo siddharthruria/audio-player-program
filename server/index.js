@@ -10,7 +10,7 @@ connectDB();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://audio-player-client.onrender.com/",
+  "https://audio-player-client.onrender.com",
 ];
 
 app.use(
