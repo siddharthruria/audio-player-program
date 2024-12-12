@@ -21,7 +21,7 @@ const Details = () => {
       <div className="program-header">
         <img
           className="program-image"
-          src={`http://localhost:5555${currProgram.image}`}
+          src={`https://audio-player-backend.onrender.com${currProgram.image}`}
           alt={currProgram.title}
         />
         <div className="program-info">

@@ -16,7 +16,7 @@ const Programs = () => {
             <img
               className="program-image"
               // src={program.image}
-              src={`http://localhost:5555${program.image}`}
+              src={`https://audio-player-backend.onrender.com${program.image}`}
               alt={program.title}
             />
             <Link

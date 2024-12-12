@@ -13,7 +13,7 @@ const PlayerProvider = ({ children }) => {
     setCurrTrack(track);
     setCurrTime(0);
     if (audioRef.current) {
-      audioRef.current.src = `http://localhost:5555${track.audioUrl}`;
+      audioRef.current.src = `https://audio-player-backend.onrender.com${track.audioUrl}`;
     }
   };
 

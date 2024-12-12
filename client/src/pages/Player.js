@@ -39,7 +39,7 @@ const Player = () => {
     <div className="track-player">
       <img
         className="program-image"
-        src={`http://localhost:5555${currProgram.image}`}
+        src={`https://audio-player-backend.onrender.com${currProgram.image}`}
         alt={currProgram.title}
       />
       <h1>{currTrack.title}</h1>

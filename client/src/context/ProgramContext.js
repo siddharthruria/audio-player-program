@@ -12,7 +12,7 @@ const ProgramProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:5555/api/program/allPrograms",
+        "https://audio-player-backend.onrender.com/api/program/allPrograms",
         {
           method: "GET",
           headers: {
@@ -40,7 +40,7 @@ const ProgramProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5555/api/program/details/${programId}`,
+        `https://audio-player-backend.onrender.com/api/program/details/${programId}`,
         {
           method: "GET",
           headers: {
@@ -69,7 +69,7 @@ const ProgramProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http:localhost:5555/api/program/tracks/${trackId}/play`,
+        `https://audio-player-backend.onrender.com/api/program/tracks/${trackId}/play`,
         {
           headers: {
             "Content-Type": "application/json",
