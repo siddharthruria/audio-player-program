@@ -104,6 +104,7 @@ const ProgramProvider = ({ children }) => {
         fetchProgramDetails,
         loading,
         currTrack,
+        setCurrTrack,
         fetchTrack,
       }}
     >

@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useRef } from "react";
+import React, { createContext, useContext, useRef, useState } from "react";
 import { ProgramContext } from "./ProgramContext";
 
 export const PlayerContext = createContext();
-const { currTrack, setCurrTrack } = useContext(ProgramContext);
 
 const PlayerProvider = ({ children }) => {
+  const { currTrack, setCurrTrack } = useContext(ProgramContext);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currTime, setCurrTime] = useState(0);
   const audioRef = useRef(null);
@@ -29,19 +29,25 @@ const PlayerProvider = ({ children }) => {
 
   const rewind = () => {
     if (audioRef.current) {
-      audioRef.current.currTime -= 10;
+      audioRef.current.currentTime = Math.max(
+        audioRef.current.currentTime - 10,
+        0
+      );
     }
   };
 
   const forward = () => {
     if (audioRef.current) {
-      audioRef.current.currTime += 10;
+      audioRef.current.currentTime = Math.min(
+        audioRef.current.currentTime + 10,
+        currTrack.duration
+      );
     }
   };
 
   const handleTimeUpdate = () => {
     if (audioRef.current) {
-      setCurrTime(audioRef.current.currTime);
+      setCurrTime(audioRef.current.currentTime);
     }
   };
 
